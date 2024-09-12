@@ -51,7 +51,7 @@ The main functionality is encapsulated in a self-invoking function that handles 
 
     if (paymentButton) {
         paymentButton.addEventListener('click', function() {
-            if (auth) {
+            if (auth) { // letting here that user who is accessing the website have already logged in the website and have JWT token
                 const id = paymentButton.getAttribute('data-id');
                 const host = window.location.hostname;
                 const payload = { id: parseInt(id, 10), host: host };
@@ -73,7 +73,7 @@ The main functionality is encapsulated in a self-invoking function that handles 
                     console.error('Error:', error);
                     alert("Something went wrong.");
                 });
-            } else {
+            } else { // if no JWT token is found it will print this 
                 alert("You must be logged in to verify payment.");
             }
         });
