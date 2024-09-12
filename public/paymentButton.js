@@ -32,7 +32,7 @@
                 };
 
                 // Send POST request to the server for payment verification
-                fetch('https://api.paymefin.tech/api/verify-payment', {
+                fetch('https://api.paymefin.tech/api/verify-payment', { // letting that this api will work
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
